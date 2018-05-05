@@ -7,7 +7,7 @@ import csv
 # the rest is code that's been commented out ~~
 
 # Here's the main function for processing a file
-def pedigree(filepath: str, numberofcolumns=2, delimiter='\t') -> dict:
+def pedigree(filepath: str, *, delimiter='\t') -> dict:
     file = open(filepath)
     read = csv.reader(file, delimiter=delimiter)
     data = list(read)
